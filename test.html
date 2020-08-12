@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Predict Your Personality</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-social.css" rel="stylesheet" />
+    <script src="./linkers/index.js" ></script>
+    <!-- FONT AWESOME CSS -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+     <!-- FLEXSLIDER CSS -->
+<link href="assets/css/flexslider.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />   
+
+  <!-- Google	Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+</head>
+<body >
+   <!--Navbar section started -->
+ <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><p class="logo-custom">Personality Prediction</p></a>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="#home">HOME</a></li>
+                     <li><a href="test.html">TAKE TEST</a></li>
+                    <li><a href="#info-sec">HELP</a></li>
+                     <li><a href="#contact-sec">CONTACT</a></li>
+                     <li><a href="http://127.0.0.1:5000/">Flask</a></li>
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+      <!--NAVBAR SECTION END-->
+
+      
+     
+      
+    <div  class="tag-line" >
+         <div class="container">
+           <div class="row  text-center" >
+           
+               <div class="col-lg-12  col-md-12 col-sm-12">
+               
+        <h2 data-scroll-reveal="enter from the bottom after 0.1s" ><i class="fa fa-circle-o-notch"></i> Predict Your Personality <i class="fa fa-circle-o-notch"></i> </h2>
+        <p data-scroll-reveal="enter from the bottom after 0.3s"> This is a prediction of your personality traits based on questions asked below .</p>
+
+                   </div>
+               </div>
+             </div>
+        
+    </div>
+    
+   
+        <div class="container">
+          <div class="row  text-center" >
+          
+              <div class="col-lg-12  col-md-12 col-sm-12">
+              
+                <form action="http://localhost:5000/test" method="post" id ="myForm" onsubmit="store_data()" >
+                  <label>
+                    <input type="text" name ="name" id="name"> Name
+                  </label>
+                  <div class="form-group">
+                    <label for="sel1">Age:</label>
+                    <select class="form-control" id="age" name="age">
+                      <option value="17">17</option>
+                      <option value ="18">18</option>
+                      <option value="19">19</option>
+                      <option value ="20">20</option>
+                      <option value="21">21</option>
+                      <option value ="22">22</option>
+                      <option value="23">23</option>
+                      <option value ="24">24</option>
+                      <option value="25">25</option>
+                      <option value ="26">26</option>
+                      <option value="27">27</option>
+                      <option value ="28">28</option>
+                    
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="sel1">Gender</label>
+                    <select class="form-control" id="gender" name="gender">
+                      <option value="Male">Male</option>
+                      <option value ="Female">Female</option>
+                      
+                    
+                    </select>
+                  </div>
+                    <div>
+                    <p>Rate your openess</p>
+                    <label class="radio-inline">
+                      <input type="radio" name="openess"  value = "1" checked> 1
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="openess" value = "2">   2
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="openess" value = "3">   3
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="openess" value = "4">   4
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="openess" value = "5">   5
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="openess" value = "6">   6
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="openess" value = "7">   7
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="openess" value = "8">   8
+                      </label>
+                    </div>
+                    <div>
+                        <p>Rate your neurotics</p>
+                        <label class="radio-inline">
+                          <input type="radio" name="neurotics"  value = "1" checked> 1
+                        </label>
+                        <label class="radin-inline">
+                          <input type="radio" name="neurotics" value = "2">   2
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="neurotics" value = "3">   3
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="neurotics" value = "4">   4
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="neurotics" value = "5">   5
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="neurotics" value = "6">   6
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="neurotics" value = "7">   7
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="neurotics" value = "8">   8
+                          </label>
+                        </div>
+
+                        <div>
+                            <p>Rate your conscientiousness</p>
+                            <label class="radio-inline">
+                              <input type="radio" name="conscientiousness"  value = "1" checked> 1
+                            </label>
+                            <label class="radin-inline">
+                              <input type="radio" name="conscientiousness" value = "2">   2
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="conscientiousness" value = "3">   3
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="conscientiousness" value = "4">   4
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="conscientiousness" value = "5">   5
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="conscientiousness" value = "6">   6
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="conscientiousness" value = "7">   7
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="conscientiousness" value = "8">   8
+                              </label>
+                            </div> 
+
+                                                           <div>
+                                    <p>Rate your agreeableness</p>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="agreeableness"  value = "1" checked> 1
+                                    </label>
+                                    <label class="radin-inline">
+                                      <input type="radio" name="agreeableness" value = "2">   2
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="agreeableness" value = "3">   3
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="agreeableness" value = "4">   4
+                                      </label>
+                                      <label class="radio-inline">
+                                        <input type="radio" name="agreeableness" value = "5">   5
+                                      </label>
+                                      <label class="radio-inline">
+                                        <input type="radio" name="agreeableness" value = "6">   6
+                                      </label>
+                                      <label class="radio-inline">
+                                        <input type="radio" name="agreeableness" value = "7">   7
+                                      </label>
+                                      <label class="radio-inline">
+                                        <input type="radio" name="agreeableness" value = "8">   8
+                                      </label>
+                                    </div> 
+
+                                    <div>
+                                        <p>Rate your extraversion</p>
+                                        <label class="radio-inline">
+                                          <input type="radio" name="extraversion"  value = "1" checked> 1
+                                        </label>
+                                        <label class="radin-inline">
+                                          <input type="radio" name="extraversion" value = "2">   2
+                                        </label>
+                                        <label class="radio-inline">
+                                          <input type="radio" name="extraversion" value = "3">   3
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="extraversion" value = "4">   4
+                                          </label>
+                                          <label class="radio-inline">
+                                            <input type="radio" name="extraversion" value = "5">   5
+                                          </label>
+                                          <label class="radio-inline">
+                                            <input type="radio" name="extraversion" value = "6">   6
+                                          </label>
+                                          <label class="radio-inline">
+                                            <input type="radio" name="extraversion" value = "7">   7
+                                          </label>
+                                          <label class="radio-inline">
+                                            <input type="radio" name="extraversion" value = "8">   8
+                                          </label>
+                                        </div> 
+
+                                        <button type="submit" class="btn btn-primary">Submit</button>      
+                  </form>
+
+                  </div>
+              </div>
+            </div>
+       
+
+             
+
+
+                  
+   
+    <!--  Jquery Core Script -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Flexslider Scripts --> 
+         <script src="assets/js/jquery.flexslider.js"></script>
+     <!--  Scrolling Reveal Script -->
+    <script src="assets/js/scrollReveal.js"></script>
+    <!--  Scroll Scripts --> 
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts --> 
+         <script src="assets/js/custom.js"></script>
+</body>
+</html>

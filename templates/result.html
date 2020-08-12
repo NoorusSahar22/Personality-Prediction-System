@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Predict Your Personality</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-social.css" rel="stylesheet" />
+    <script src="./linkers/index.js"></script>
+    <!-- FONT AWESOME CSS -->
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- FLEXSLIDER CSS -->
+    <link href="../assets/css/flexslider.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <!-- Google	Fonts -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <title>{% block title %}{% endblock %} - Flaskr</title>
+<div>
+     <!--Navbar section started -->
+ <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><p class="logo-custom">Personality Prediction</p></a>
+        </div>
+        <div class="navbar-collapse collapse move-me">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="#home">HOME</a></li>
+                 <li><a href="../test.html">TAKE TEST</a></li>
+                <li><a href="#info-sec">HELP</a></li>
+                 <li><a href="#contact-sec">CONTACT</a></li>
+                 <li><a href="http://127.0.0.1:5000/">Flask</a></li>
+            </ul>
+        </div>
+       
+    </div>
+</div>
+  <!--NAVBAR SECTION END-->
+</div>
+<div></div>
+<div></div>
+<div></div>
+</br>
+</br>
+</br>
+
+
+<div  class="tag-line" >
+    <div class="container">
+      <div class="row  text-center" >
+      
+          <div class="col-lg-12  col-md-12 col-sm-12">
+          
+            {% block content %} {% if result == ["dependable"] %}
+
+            <div>
+                <h2 >{{name}} You are Dependable</h2>
+                 <hr />
+                   <p class="para">
+                    Dependability—A trustworthy person is dependable. They honor their commitments by being reliable. If they say they are going to do something, they do it. A dependable person builds trust by holding him/herself accountable, and if they lead others, holding their team members accountable as well
+                       
+                   </p>
+            </div>
+            {% endif %} {% if result == ["responsible"] %}
+        
+            <div>
+                <h2 >{{name}} You are Responsible</h2>
+                 <hr />
+                   <p class="para">
+                    Responsible person means being able to consciously make decisions, conduct behaviors that seek to improve oneself and/or help others. Most importantly, a responsible person accepts the consequences of his or her own actions and decisions
+                       
+                   </p>
+            </div>
+        
+            {% endif %} {% if result == ["serious"] %}
+        
+            <div>
+                <h2 >{{name}} You are Serious</h2>
+                 <hr />
+                   <p class="para">
+                    Individuals with the Serious personality style maintain a sober demeanor. They are solemn and not given to emotional expression. No pretentions. They are realistically aware of their own capabilities, but they are also aware of their own limitations; they are not tempted by vanity or self-importance   
+                   </p>
+            </div>
+        
+            {% endif %} {% if result == ["lively"] %}
+        
+            <div>
+                <h2 >{{name}} You are Lively</h2>
+                 <hr />
+                   <p class="para">
+                    Lively means "active, spirited, and energetic." Lively is an adjective derived from the noun "life," and it basically means "full of life." A lively party is exciting and entertaining. A lively person has an energetic personality, is always on alert, and prefers being active as opposed to just hanging around
+                   </p>
+            </div>
+        
+            {% endif %} {% if result == ["extraverted"] %}
+        
+            <div>
+                <h2 >{{name}} You are Extraverted</h2>
+                 <hr />
+                   <p class="para">
+                    Individuals high in extraversion on a career test have a tendency to seek out the company and stimulation of other people. They enjoy engaging with the external world. These individuals thrive on excitement, and are enthusiastic, action-oriented people. They like to be the center of attention in groups.
+                    </p>
+            </div>
+        
+            {% endif %}
+        
+            <div>Attempt again</div>
+        
+            {% endblock content %}
+
+              </div>
+          </div>
+        </div>
+   
+</div>
+
+
+<!--Detail section started -->
+<div id="info-sec" class="container set-pad">
+    <div class="row text-center">
+               <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                   <h3 data-scroll-reveal="enter from the bottom after 0.2s"  class="header-line">Big5 Personality Traits.</h3>
+                   <p data-scroll-reveal="enter from the bottom after 0.03s">Personality is a fundamental differentiating factor of human behavior. Research in the
+psychology literature has led to a well established model for personality recognition and
+description, called the Big Five Personality Model.</p>
+<h2></h2>
+               </div>
+
+            <div class="row" >
+         
+             
+               <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                   <div class="about-div">
+                  
+                 <h4 >DEPENDABLE</h4>
+               <hr />
+                 <p class="para">
+                    Dependability—A trustworthy person is dependable. They honor their commitments by being reliable. If they say they are going to do something, they do it. A dependable person builds trust by holding him/herself accountable, and if they lead others, holding their team members accountable as well
+                     
+                     
+                 </p>
+            
+              </div>
+                 </div>
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                   <div class="about-div">
+                   
+                 <h4 >SERIOUS</h4>
+               <hr />
+                     
+                 <p class="para">
+                    Individuals with the Serious personality style maintain a sober demeanor. They are solemn and not given to emotional expression. No pretentions. They are realistically aware of their own capabilities, but they are also aware of their own limitations; they are not tempted by vanity or self-importance   
+                   
+                 </p>
+             
+              </div>
+                 </div>
+               <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                   <div class="about-div">
+                       
+                     <h4 >RESPONSIBLE</h4>
+                   <hr />
+                        
+                     <p class="para">
+                        Responsible person means being able to consciously make decisions, conduct behaviors that seek to improve oneself and/or help others. Most importantly, a responsible person accepts the consequences of his or her own actions and decisions
+                   
+                         
+                     </p>
+             
+              </div>
+                 </div>
+               </div>
+
+              <div class="row">
+
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                   <div class="about-div">
+                       
+                     <h4 >LIVELY</h4>
+                   <hr />
+                        
+                     <p class="para">
+                        Lively means "active, spirited, and energetic." Lively is an adjective derived from the noun "life," and it basically means "full of life." A lively party is exciting and entertaining. A lively person has an energetic personality, is always on alert, and prefers being active as opposed to just hanging around
+                  
+                     </p>
+             
+              </div>
+                 </div>
+
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                   <div class="about-div">
+                       
+                     <h4 >EXTRAVERTED</h4>
+                   <hr />
+                         
+                     <p class="para">
+                        Individuals high in extraversion on a career test have a tendency to seek out the company and stimulation of other people. They enjoy engaging with the external world. These individuals thrive on excitement, and are enthusiastic, action-oriented people. They like to be the center of attention in groups.
+                     
+                     </p>
+             
+              </div>
+                 </div>
+               
+               
+             </div>
+           </div>
+
+  </div>
+
+
+    <div id="contact-sec"   >
+        <div class="overlay">
+          <div class="container set-pad">
+            <div class="row text-center">
+                   <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                       <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line" >CONTACT US  </h1>
+                       <p data-scroll-reveal="enter from the bottom after 0.3s">
+                        
+                           </p>
+                   </div>
+  
+               </div>
+            
+             <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" >
+             
+                 
+                   <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                      <form>
+                          <div class="form-group">
+                              <input type="text" class="form-control "  required="required" placeholder="Your Name" />
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control " required="required"  placeholder="Your Email" />
+                          </div>
+                          <div class="form-group">
+                              <textarea name="message" required="required" class="form-control" style="min-height: 150px;" placeholder="Message"></textarea>
+                          </div>
+                          <div class="form-group">
+                              <button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
+                          </div>
+  
+                      </form>
+                  </div>
+  
+                     
+       
+                
+                
+                  
+                 </div>
+                </div>
+            </div> 
+         </div>
+       <div class="container">
+               
+       </div>
+  
+       <!-- CONTACT SECTION END-->
+   <!--  Jquery Core Script -->
+   <script src="../assets/js/jquery-1.10.2.js"></script>
+   <!--  Core Bootstrap Script -->
+   <script src="../assets/js/bootstrap.js"></script>
+   <!--  Flexslider Scripts --> 
+        <script src="../assets/js/jquery.flexslider.js"></script>
+    <!--  Scrolling Reveal Script -->
+   <script src="../assets/js/scrollReveal.js"></script>
+   <!--  Scroll Scripts --> 
+   <script src="../assets/js/jquery.easing.min.js"></script>
+   <!--  Custom Scripts --> 
+        <script src="../assets/js/custom.js"></script>
+        
+         
+  </body>
+</html>
